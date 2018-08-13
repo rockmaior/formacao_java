@@ -10,11 +10,11 @@ public class TesteEscritaPrintStreamPrintWriter {
 		
 //		PrintStream ps = new PrintStream("lorem5.txt");
 		
-		PrintWriter ps = new PrintWriter("lorem4.txt");
+		PrintWriter ps = new PrintWriter("lorem4.txt", "UTF-8");
 		
-		ps.print("Lorem ipsum dolor consectur amet..");
+		ps.print("Você é especial!");
 		ps.println();
-		ps.print("Reginaldo Ribeiro");
+		ps.print("Um coração.");
 		
 		
 		ps.close();
