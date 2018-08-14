@@ -7,20 +7,22 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
-public class TesteSerializacao {
+public class TesteSerializacaoCliente {
 
 	public static void main(String[] args) throws FileNotFoundException, IOException, ClassNotFoundException {
+		
+		Cliente cliente = new Cliente();
+		cliente.setCpf("12345678999");
+		cliente.setNome("Reginaldo");
+		cliente.setProfissao("Militar");
+		
+		
 		//A - Transformar um objeto em fluxo binario
-//		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("teste.bin"));
-//		oos.writeObject("Reginaldo");
-//		oos.close();
+		ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("cliente.bin"));
+		oos.writeObject(cliente);
+		oos.close();
 		
-	//B - Transformar um fluxo binario em objeto
-		
-//		ObjectInputStream ois = new ObjectInputStream(new FileInputStream("teste.bin"));
-//		String nome = (String) ois.readObject();
-//		ois.close();
-//		System.out.println(nome);
+
 		
 		
 		
